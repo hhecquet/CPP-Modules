@@ -6,18 +6,20 @@
 #    By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/16 15:45:47 by marvin            #+#    #+#              #
-#    Updated: 2025/04/18 08:31:32 by hhecquet         ###   ########.fr        #
+#    Updated: 2025/04/18 12:05:06 by hhecquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 
-NAME = megaphone
+NAME = account
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	megaphone.cpp
+SRCS =	Account.cpp	\
+		tests.cpp	
+
 
 OBJDIR = 🖇️​
 OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

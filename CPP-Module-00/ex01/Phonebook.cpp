@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 07:17:16 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/17 07:17:16 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/18 15:09:29 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 Phonebook::Phonebook(void)
 {
+	this->index = 0;
 }
 
 Phonebook::~Phonebook(void)
@@ -75,7 +76,6 @@ void	Phonebook::add(void)
 
 void	Phonebook::print(Contact contact)
 {
-	std::cout << std::endl << "Requesting contact information..." << std::endl;
 	if (!contact.get_first().size())
 	{
 		std::cout << "Failed to get info for this contact" << std::endl;
