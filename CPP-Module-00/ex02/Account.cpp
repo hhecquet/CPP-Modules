@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 08:48:31 by hhecquet          #+#    #+#             */
-/*   Updated: 2025/04/18 13:34:50 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/04/22 09:12:03 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,18 @@ Account::Account(int initial_deposit)
 	this->_totalAmount += initial_deposit;
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
+	Account::_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex
+		<< ";amount:" << this->_amount
+		<< ";created" << std::endl;
 }
 
 Account::~Account(void)
 {
+	Account::_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex
+		<< ";amount:" << this->_amount
+		<< ";closed" << std::endl;
 }
 
 int Account::getNbAccounts(void)
@@ -74,7 +82,6 @@ void	Account::makeDeposit(int deposit)
 	std::cout << ";amount:" << this->_amount
 		<< ";nb_deposits:" << this->_nbDeposits
 		<< std::endl;
-	Account::_nbDeposits++;
 	Account::_totalNbDeposits++;
 	Account::_totalAmount += deposit;
 }
@@ -85,7 +92,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	std::cout << "index:" << this->_accountIndex
 		<< ";p_amount:" << this->_amount
 		<< ";withdrawal:";
-	if (Account::_amount < 0)
+	if ((Account::_amount - withdrawal) < 0)
 	{
 		std::cout << "refused" << std::endl;
 		return (false);
@@ -109,7 +116,7 @@ void	Account::displayStatus(void) const
 {
 	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex
-		<< ";total:" << this->_amount
+		<< ";amount:" << this->_amount
 		<< ";deposits:" << this->_nbDeposits
 		<< ";withdrawals:" << this->_nbWithdrawals
 		<< std::endl;

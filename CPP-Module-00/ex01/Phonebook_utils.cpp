@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook_utils.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 07:49:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/17 07:49:05 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/22 09:51:32 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	search_utils(Contact contacts[8])
 			str = c;
 			str = fix_width(str, 10);
 			std::cout << "|" << add_spaces(10 - str.size()) << str;
-			str = fix_width(contacts[c - 1  - '0'].get_first(), 10);
+			str = fix_width(contacts[c - 1 - '0'].get_first(), 10);
 			std::cout << "|" << add_spaces(10 - str.size()) << str;
 			str = fix_width(contacts[c - 1 - '0'].get_last(), 10);
 			std::cout << "|" << add_spaces(10 - str.size()) << str;
