@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:51:38 by hhecquet          #+#    #+#             */
-/*   Updated: 2025/04/22 13:12:55 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/04/28 13:34:11 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class HumanB
 {
 private:
 	std::string name;
-	Weapon &weapon;	
+	Weapon *weapon;
 public:
 	HumanB(std::string name);
 	~HumanB();

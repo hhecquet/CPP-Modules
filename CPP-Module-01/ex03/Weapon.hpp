@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:44:39 by hhecquet          #+#    #+#             */
-/*   Updated: 2025/04/22 12:51:21 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/04/28 13:41:31 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Weapon(std::string type);
 	~Weapon();
 	std::string getType(void) const;
-	void setType(std::string type);
+	void setType(std::string newtype);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 07:49:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/22 09:51:32 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/04/28 13:01:48 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	search_utils(Contact contacts[8])
 	std::string	str;
 
 	std::cout << " ___________________________________________ " << std::endl;
-	std::cout << "|Index     |First Name|Last Name |Nickname  |" << std::endl;
+	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
 	c = '0';
 	i = 0;

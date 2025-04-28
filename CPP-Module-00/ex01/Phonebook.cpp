@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 07:17:16 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/18 15:09:29 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:59:13 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,47 +31,43 @@ void	Phonebook::add(void)
 {
 	std::string	str;
 
+	this->index = this->index % 8;
 	str = "";
-    if (this->index < 8)
-	{
-        while (!std::cin.eof() && str == "")
-    	{
-    		std::cout << "First name: ";
-    		if (std::getline(std::cin, str) && str != "")
-    			this->contacts[this->index % 8].set_first(str);
-    	}
-    	str = "";
-    	while (!std::cin.eof() && str == "")
-    	{
-    		std::cout << "Last name: ";
-    		if (std::getline(std::cin, str) && str != "")
-    			this->contacts[this->index % 8].set_last(str);
-    	}
-    	str = "";
-    	while (!std::cin.eof() && str == "")
-    	{
-    		std::cout << "Nickname: ";
-    		if (std::getline(std::cin, str) && str != "")
-    			this->contacts[this->index % 8].set_nick(str);
-    	}
-    	str = "";
-    	while (!std::cin.eof() && str == "")
-    	{
-    		std::cout << "Phone number: ";
-    		if (std::getline(std::cin, str) && str != "")
-    			this->contacts[this->index % 8].set_number(str);
-    	}
-    	str = "";
-    	while (!std::cin.eof() && str == "")
-    	{
-    		std::cout << "Darkest secret: ";
-    		if (std::getline(std::cin, str) && str != "")
-    			this->contacts[this->index % 8].set_secret(str);
-    	}
-    	this->index++;
+    while (!std::cin.eof() && str == "")
+    {
+    	std::cout << "First name: ";
+    	if (std::getline(std::cin, str) && str != "")
+    		this->contacts[this->index % 8].set_first(str);
     }
-    else
-        std::cout << "Phonebook is full" << std::endl;
+    str = "";
+    while (!std::cin.eof() && str == "")
+    {
+    	std::cout << "Last name: ";
+    	if (std::getline(std::cin, str) && str != "")
+    		this->contacts[this->index % 8].set_last(str);
+    }
+    str = "";
+    while (!std::cin.eof() && str == "")
+    {
+    	std::cout << "Nickname: ";
+    	if (std::getline(std::cin, str) && str != "")
+    		this->contacts[this->index % 8].set_nick(str);
+    }
+    str = "";
+    while (!std::cin.eof() && str == "")
+    {
+    	std::cout << "Phone number: ";
+    	if (std::getline(std::cin, str) && str != "")
+    		this->contacts[this->index % 8].set_number(str);
+    }
+    str = "";
+    while (!std::cin.eof() && str == "")
+    {
+    	std::cout << "Darkest secret: ";
+    	if (std::getline(std::cin, str) && str != "")
+    		this->contacts[this->index % 8].set_secret(str);
+    }
+    this->index++;
 }
 
 void	Phonebook::print(Contact contact)
