@@ -3,21 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/16 15:45:47 by marvin            #+#    #+#              #
-#    Updated: 2025/04/28 13:48:26 by hhecquet         ###   ########.fr        #
+#    Created: 2025/04/29 15:24:57 by marvin            #+#    #+#              #
+#    Updated: 2025/04/29 15:24:57 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 
-NAME = replace
+NAME = harl
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++11
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp		
+SRCS =	main.cpp		\
+		Harl.cpp
 
 
 OBJDIR = 🖇️​
