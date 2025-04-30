@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:23:23 by marvin            #+#    #+#             */
-/*   Updated: 2025/04/29 15:23:23 by marvin           ###   ########.fr       */
+/*   Updated: 2025/04/30 08:21:27 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,26 @@ void Harl::complain(std::string level)
 {
 	static const std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	static const HarlFt fns[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
+	int idx = -1;
+	
 	for (size_t i = 0; i < 4; ++i) {
 		if (level == levels[i]) {
-			(this->*fns[i])();
+			idx = i;
 			return;
 		}
 	}
-	std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
+	switch (idx)
+	{
+		case 0;
+			this->debug();
+		case 1;
+			this->info();
+		case 2;
+			this->warning();
+		case 3;
+			this->error();
+		default:
+			std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
+	}
 }
 //You must use, and maybe discover, the switch statement in this exercise.

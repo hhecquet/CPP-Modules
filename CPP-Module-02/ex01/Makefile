@@ -5,19 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/16 15:45:47 by marvin            #+#    #+#              #
-#    Updated: 2025/04/30 10:25:36 by hhecquet         ###   ########.fr        #
+#    Created: 2025/04/30 09:54:11 by hhecquet          #+#    #+#              #
+#    Updated: 2025/04/30 13:47:42 by hhecquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 
-NAME = replace
+NAME = ex01 a.out
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp		
+SRCS =	main.cpp		\
+		Fixed.cpp
 
 
 OBJDIR = 🖇️​

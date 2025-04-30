@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:48:34 by hhecquet          #+#    #+#             */
-/*   Updated: 2025/04/28 14:13:08 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/04/30 10:48:23 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,18 @@ int main(int argc, char **argv)
 		std::cerr << "s1 cannot be empty\n";
 		return 1;
 	}
-	std::ifstream infile{filename};
+	std::ifstream infile(filename.c_str());
 	if (!infile)
 	{
 		std::cerr << "cannot open \""<< filename << "\"\n";
 		return 1;
 	}
 	std::string outname = filename + ".replace";
-	std::ofstream outfile{outname};
-	std::string content
-	{
-		std::istreambuf_iterator<char>(infile),
+	std::ofstream outfile(outname.c_str());
+	std::string content(
+		(std::istreambuf_iterator<char>(infile)),
 		std::istreambuf_iterator<char>()
-	};
+	);
 	std::string transformed = replaceAll(content, s1, s2);
 	outfile << transformed;
     return 0;
@@ -63,3 +62,6 @@ int main(int argc, char **argv)
 // std::string is like a note in your hand.
 // std::ifstream is like opening a drawer to read the note.
 // std::ofstream is like writing a new note and putting it back into the drawer.
+
+//std::istreambuf_iterator reads everything, including whitespace and newlines
+//ideal for "read entire file into string" tasks.
