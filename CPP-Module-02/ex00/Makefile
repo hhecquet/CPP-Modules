@@ -6,13 +6,13 @@
 #    By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/30 09:54:11 by hhecquet          #+#    #+#              #
-#    Updated: 2025/04/30 09:54:43 by hhecquet         ###   ########.fr        #
+#    Updated: 2025/05/05 13:05:20 by hhecquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .SILENT:
 
-NAME = ex00
+NAME = a.out
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
