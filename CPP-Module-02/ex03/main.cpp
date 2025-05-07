@@ -10,17 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
 int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	Point a(0, 0);
+	Point b(5, 0);
+	Point c(0, 5);
+	Point pointInside(2, 1);
+	Point pointOutside(6, 6);
+	Point pointOnEdge(0, 0);
+
+	if (bsp(a, b, c, pointInside)) {
+		std::cout << "The point is inside the triangle." << std::endl;
+	} else {
+		std::cout << "The point is outside or on the edge of the triangle." << std::endl;
+	}
+	if (bsp(a, b, c, pointOutside)) {
+		std::cout << "The point is inside the triangle." << std::endl;
+	} else {
+		std::cout << "The point is outside or on the edge of the triangle." << std::endl;
+	}
+	if (bsp(a, b, c, pointOnEdge)) {
+		std::cout << "The point is inside the triangle." << std::endl;
+	} else {
+		std::cout << "The point is outside or on the edge of the triangle." << std::endl;
+	}
 	return 0;
 }

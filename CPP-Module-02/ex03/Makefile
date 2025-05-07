@@ -12,17 +12,15 @@
 
 .SILENT:
 
-NAME = zoo
+NAME = bsp
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp		\
-		Animal.cpp		\
-		Cat.cpp			\
-		Dog.cpp			\
-		WrongAnimal.cpp	\
-		WrongCat.cpp
+		Fixed.cpp		\
+		Point.cpp		\
+		bsp.cpp
 
 
 OBJDIR = 🖇️​

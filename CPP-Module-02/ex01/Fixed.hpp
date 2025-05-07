@@ -24,9 +24,9 @@ class Fixed
 	public :
 		Fixed();
 		Fixed(const Fixed& other);
-		Fixed(const int n);//Un constructeur prenant un entier constant en paramètre et qui convertit celui-ci en virgule fixe.
-		Fixed(const float f);//Un constructeur prenant un flottant constant en paramètre et qui convertit celui-ci en virgule fixe.
-		Fixed& operator=(const Fixed& other);//Une surcharge de l’opérateur d’affectation.
+		Fixed(const int n);
+		Fixed(const float f);
+		Fixed& operator=(const Fixed& other);
 		~Fixed(void);
 		float toFloat( void ) const;
 		int toInt( void ) const;
@@ -34,6 +34,6 @@ class Fixed
 		void setRawBits(int const raw);
 };
 
-std::ostream& operator<<(std::ostream& os, const Fixed& fixed);//Une surcharge de l’opérateur d’insertion.
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif

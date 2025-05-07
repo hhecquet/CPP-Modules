@@ -65,7 +65,7 @@
 		"plaintext": false,
 		"markdown": false,
 		"scminput": false,
-		"cpp": false
+		"cpp": true
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
