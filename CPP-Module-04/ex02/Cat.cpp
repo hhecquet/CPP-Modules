@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 16:16:25 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/07 16:16:25 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/08 14:45:55 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,12 @@ Cat::~Cat(void) {
 
 void Cat::makeSound(void) const {
     std::cout << "Meow Meow!" << std::endl;
+}
+
+void Cat::setIdeas(const std::string& idea, int index) {
+    this->brain->setIdeas(idea, index);
+}
+
+std::string Cat::getIdeas(int index) const {
+    return this->brain->getIdeas(index);
 }
