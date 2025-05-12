@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 15:06:05 by hhecquet          #+#    #+#             */
-/*   Updated: 2025/05/12 09:44:28 by hhecquet         ###   ########.fr       */
+/*   Created: 2025/05/12 08:55:01 by hhecquet          #+#    #+#             */
+/*   Updated: 2025/05/12 09:44:45 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Cure.hpp"
 #include "ICharacter.hpp"
 
-AMateria::AMateria(std::string const & type) : _type(type) {}
+Cure::Cure() : AMateria("cure") {}
 
-AMateria::AMateria(AMateria const & src) {
-	*this = src;
-}
+Cure::Cure(Cure const & src) : AMateria(src) {}
 
-AMateria& AMateria::operator=(AMateria const &other) {
-	if (this != &other) {
+Cure& Cure::operator=(Cure const &other)
+{
+	if (this != &other)
+	{
 		this->_type = other._type;
 	}
 	return *this;
 }
 
-AMateria::~AMateria() {}
+Cure::~Cure() {}
 
-std::string const & AMateria::getType() const {
-	return this->_type;
+AMateria* Cure::clone() const {
+	return new Cure(*this);
 }
 
-void AMateria::use(ICharacter& target) {
-	std::cout << "* uses " << this->_type << " on " << target.getName() << " *" << std::endl;
+void Cure::use(ICharacter& target) {
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
