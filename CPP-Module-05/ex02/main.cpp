@@ -11,45 +11,38 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include <iostream>
 
-int main(void)
-{
-    std::cout << "\n-----Aline's incrementation------\n" << std::endl;
-	try
-    {
-		Bureaucrat b1("Aline", 2);
-		std::cout << b1 << std::endl;
-		b1.incrementGrade();
-		std::cout << b1 << std::endl;
+int main() {
+	try {
+		Bureaucrat bob("Bob", 1);
+		Bureaucrat jim("Jim", 140);
+		Bureaucrat sam("Sam", 50);
 
-		b1.incrementGrade();
-		std::cout << b1 << std::endl;
+		ShrubberyCreationForm shrub("home");
+		RobotomyRequestForm robot("Marvin");
+		PresidentialPardonForm pardon("Ford");
+
+		jim.signForm(shrub);
+		jim.executeForm(shrub);
+		bob.executeForm(shrub);
+
+		sam.signForm(robot);
+		sam.executeForm(robot);
+		bob.executeForm(robot);
+
+		bob.signForm(pardon);
+		bob.executeForm(pardon);
+
+		ShrubberyCreationForm testFail("park");
+		bob.executeForm(testFail);
+
+	} catch (std::exception &e) {
+		std::cerr << "Exception: " << e.what() << std::endl;
 	}
-    catch (std::exception &e)
-    {
-		std::cerr << e.what() << std::endl;
-	}
-    std::cout << "\n-Corentin's wrong initialization-\n" << std::endl;
-	try
-    {
-		Bureaucrat b2("Corentin", 151);
-	}
-    catch (std::exception &e)
-    {
-		std::cerr << e.what() << std::endl;
-	}
-    std::cout << "\n-----Collin's decrementation-----\n" << std::endl;
-	try 
-    {
-		Bureaucrat b3("Collin", 149);
-		std::cout << b3 << std::endl;
-		b3.decrementGrade();
-		std::cout << b3 << std::endl;
-		b3.decrementGrade();
-	}
-    catch (std::exception &e)
-    {
-		std::cerr << e.what() << std::endl;
-	}
+
 	return 0;
 }

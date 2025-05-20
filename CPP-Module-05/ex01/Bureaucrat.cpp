@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp" // Needed for signForm
+#include <iostream>
 
 Bureaucrat::Bureaucrat(): name("Default"), grade(150) {}
 
@@ -31,6 +33,16 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other) {
 }
 
 Bureaucrat::~Bureaucrat() {}
+
+void Bureaucrat::signForm(Form &form) {
+	try {
+		form.beSigned(*this);
+		std::cout << name << " signed " << form.getName() << std::endl;
+	} catch
+		(const std::exception &e) {
+		std::cout << name << " couldn't sign " << form.getName() << " because: " << e.what() << std::endl;
+	}
+}
 
 const std::string &Bureaucrat::getName() const {
 	return name;

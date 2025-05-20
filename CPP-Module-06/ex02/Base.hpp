@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 09:18:40 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 09:18:40 by marvin           ###   ########.fr       */
+/*   Created: 2025/05/20 10:28:57 by marvin            #+#    #+#             */
+/*   Updated: 2025/05/20 10:28:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "AForm.hpp"
+#include <iostream>
 #include <string>
+#include <cstdlib>
 
-class ShrubberyCreationForm : public AForm {
-private:
-    const std::string target;
-
-public:
-    ShrubberyCreationForm(const std::string &target);
-    ~ShrubberyCreationForm();
-
-    void execute(Bureaucrat const &executor) const;
+class Base
+{
+    public:
+        virtual ~Base() {}
 };
+
+class A : public Base {};
+
+class B : public Base {};
+
+class C : public Base {};
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);

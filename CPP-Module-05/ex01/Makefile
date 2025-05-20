@@ -12,13 +12,14 @@
 
 .SILENT:
 
-NAME = a.out
+NAME = form
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp		\
-		Fixed.cpp
+		Bureaucrat.cpp	\
+		Form.cpp
 
 
 OBJDIR = 🖇️​

@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 09:18:40 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 09:18:40 by marvin           ###   ########.fr       */
+/*   Created: 2025/05/19 10:05:56 by marvin            #+#    #+#             */
+/*   Updated: 2025/05/19 10:05:56 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
+#include "Intern.hpp"
 #include "AForm.hpp"
-#include <string>
+#include "Bureaucrat.hpp"
 
-class ShrubberyCreationForm : public AForm {
-private:
-    const std::string target;
+int main() {
+    Intern someRandomIntern;
+    AForm* form;
 
-public:
-    ShrubberyCreationForm(const std::string &target);
-    ~ShrubberyCreationForm();
+    form = someRandomIntern.makeForm("robotomy request", "Bender");
+    if (form)
+        delete form;
 
-    void execute(Bureaucrat const &executor) const;
-};
+    form = someRandomIntern.makeForm("unknown form", "Bender");
+    if (form)
+        delete form;
+
+    return 0;
+}

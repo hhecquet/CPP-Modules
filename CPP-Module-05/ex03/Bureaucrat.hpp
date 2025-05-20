@@ -12,9 +12,12 @@
 
 #pragma once
 
+#include "AForm.hpp"
 #include <iostream>
 #include <string>
 #include <stdexcept>
+
+class AForm;
 
 class Bureaucrat
 {
@@ -28,6 +31,9 @@ class Bureaucrat
     	Bureaucrat(const Bureaucrat &other);
     	Bureaucrat &operator=(const Bureaucrat &other);
     	~Bureaucrat();
+
+		void signForm(AForm &form);
+		void executeForm(AForm const & form) const;
 
     	const std::string &getName() const;
     	int getGrade() const;

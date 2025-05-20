@@ -12,13 +12,13 @@
 
 .SILENT:
 
-NAME = a.out
+NAME = realtype
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp		\
-		Fixed.cpp
+		Base.cpp
 
 
 OBJDIR = 🖇️​

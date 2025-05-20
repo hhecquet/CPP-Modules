@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 09:18:40 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 09:18:40 by marvin           ###   ########.fr       */
+/*   Created: 2025/05/20 10:33:00 by marvin            #+#    #+#             */
+/*   Updated: 2025/05/20 10:33:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Base.hpp"
 
-#include "AForm.hpp"
-#include <string>
-
-class ShrubberyCreationForm : public AForm {
-private:
-    const std::string target;
-
-public:
-    ShrubberyCreationForm(const std::string &target);
-    ~ShrubberyCreationForm();
-
-    void execute(Bureaucrat const &executor) const;
-};
+int main(void)
+{
+    Base *base = generate();
+    std::cout << "Identifying using pointer: ";
+    identify(base);
+    std::cout << "Identifying using reference: ";
+    identify(*base);
+    delete base;
+    return 0;
+}
