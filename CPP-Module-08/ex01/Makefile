@@ -12,7 +12,7 @@
 
 .SILENT:
 
-NAME = a.out
+NAME = span
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98

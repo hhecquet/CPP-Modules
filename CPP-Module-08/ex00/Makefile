@@ -12,14 +12,12 @@
 
 .SILENT:
 
-NAME = a.out
+NAME = easyfind
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp		\
-		Fixed.cpp
-
+SRCS =	main.cpp
 
 OBJDIR = 🖇️​
 OBJS = $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

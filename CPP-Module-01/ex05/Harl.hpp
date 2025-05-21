@@ -22,8 +22,8 @@ class Harl
 		void info(void);
 		void warning(void);
 		void error(void);
-		//
 		typedef void (Harl::*HarlFt)(void);
+		//static void (Harl::*fns[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error}; in Harl.cpp
 	public :
 		Harl(void);
 		~Harl(void);
