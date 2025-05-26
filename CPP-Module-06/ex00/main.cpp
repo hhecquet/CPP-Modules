@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 10:22:56 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 10:22:56 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 12:45:32 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv) {
     if (argc != 2) {
-        std::cerr << "Usage: ./convert <literal>" << std::endl;
+        std::cerr << "Usage: ./convert <arg>" << std::endl;
         return 1;
     }
 
