@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 09:18:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 09:18:37 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 10:37:32 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
     checkExecutability(executor);
 
     std::ofstream out((target + "_shrubbery").c_str());
-    out << "   🌿\n  🌿🌿\n 🌿🌿🌿\n   🪵" << std::endl;
+    out << "   /\\\n  /  \\\n /    \\\n   ||\n" << std::endl;
     out.close();
 }

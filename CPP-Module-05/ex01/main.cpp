@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:19:43 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/16 14:19:43 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 09:43:00 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main() {
         std::cout << f2 << std::endl;
 
     } catch (std::exception &e) {
-        std::cerr << "Exception: " << e.what() << std::endl;
+        std::cerr << "Caught exception: " << e.what() << std::endl;
     }
 
     std::cout << "\n---------------------------\n";

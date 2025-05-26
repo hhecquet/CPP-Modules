@@ -58,7 +58,9 @@
 		"cinttypes": "cpp",
 		"typeinfo": "cpp",
 		"variant": "cpp",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		"list": "cpp",
+		"set": "cpp"
 	},
 	"github.copilot.enable": {
 		"*": false,

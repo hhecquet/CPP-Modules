@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:18:06 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/16 14:18:06 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 09:37:15 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp" // Needed for signForm
+#include "Form.hpp"
 #include <iostream>
 
 Bureaucrat::Bureaucrat(): name("Default"), grade(150) {}

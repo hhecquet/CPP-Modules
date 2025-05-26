@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 09:18:31 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 09:18:31 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 10:38:45 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ RobotomyRequestForm::~RobotomyRequestForm() {}
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
     checkExecutability(executor);
-    std::cout << "🛠️🔩🪛⚙️🪚" << std::endl;
+    std::cout << "🛠️ Brrrrrrr" << std::endl;
     if (std::rand() % 2)
         std::cout << target << " has been robotomized successfully! 🤖" << std::endl;
     else

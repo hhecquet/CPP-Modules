@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 09:18:11 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 09:18:11 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 10:38:11 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ PresidentialPardonForm::~PresidentialPardonForm() {}
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const {
     checkExecutability(executor);
-    std::cout << target << " has been pardoned by the President. 🙇" << std::endl;
+    std::cout << target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

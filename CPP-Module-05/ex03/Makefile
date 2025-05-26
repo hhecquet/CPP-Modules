@@ -6,7 +6,7 @@
 #    By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/30 09:54:11 by hhecquet          #+#    #+#              #
-#    Updated: 2025/05/05 13:04:59 by hhecquet         ###   ########.fr        #
+#    Updated: 2025/05/26 09:56:39 by hhecquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 NAME = intern
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 SRCS =	main.cpp					\
 		Bureaucrat.cpp				\
