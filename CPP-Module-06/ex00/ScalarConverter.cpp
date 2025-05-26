@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 10:15:48 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/19 10:15:48 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/26 11:13:20 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,20 @@ ScalarConverter::~ScalarConverter() {}
 
 void ScalarConverter::convert(const std::string &literal) {
     double value = 0.0;
-    bool isCharLiteral = (literal.length() == 3 && literal[0] == '\'' && literal[2] == '\'');
 
-    if (isCharLiteral) {
-        char c = literal[1];
+    if (literal.empty()) {
+        std::cout << "Invalid input" << std::endl;
+        return;
+    }
+
+    bool isSingleChar = (literal.length() == 1 && !std::isdigit(literal[0]));
+
+    if (isSingleChar) {
+        char c = literal[0];
         value = static_cast<double>(c);
-    } else if (literal == "nan" || literal == "nanf" || literal == "+inf" || literal == "-inf" || literal == "+inff" || literal == "-inff") {
+    } else if (literal == "nan" || literal == "nanf" ||
+               literal == "+inf" || literal == "+inff" ||
+               literal == "-inf" || literal == "-inff") {
         if (literal == "nan" || literal == "nanf")
             value = std::numeric_limits<double>::quiet_NaN();
         else if (literal == "+inf" || literal == "+inff")
@@ -44,20 +52,28 @@ void ScalarConverter::convert(const std::string &literal) {
             return;
         }
     }
+
+    // Print char
     std::cout << "char: ";
-    if (isnan(value) || value < 0 || value > 127)
+    if (std::isnan(value) || value < 0 || value > 127)
         std::cout << "impossible" << std::endl;
     else if (!isprint(static_cast<char>(value)))
         std::cout << "Non displayable" << std::endl;
     else
         std::cout << "'" << static_cast<char>(value) << "'" << std::endl;
+
+    // Print int
     std::cout << "int: ";
-    if (isnan(value) || value < std::numeric_limits<int>::min() || value > std::numeric_limits<int>::max())
+    if (std::isnan(value) || value < std::numeric_limits<int>::min() || value > std::numeric_limits<int>::max())
         std::cout << "impossible" << std::endl;
     else
         std::cout << static_cast<int>(value) << std::endl;
+
+    // Print float
     std::cout << "float: " << std::fixed << std::setprecision(1)
               << static_cast<float>(value) << "f" << std::endl;
+
+    // Print double
     std::cout << "double: " << std::fixed << std::setprecision(1)
               << value << std::endl;
 }
