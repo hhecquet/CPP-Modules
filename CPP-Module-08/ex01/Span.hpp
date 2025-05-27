@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 09:20:19 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/21 09:20:19 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/27 08:41:38 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,16 @@ private:
     std::vector<int> _numbers;
 
 public:
-    // Constructors, destructor, and assignment operator
     Span();
     Span(unsigned int N);
     Span(const Span &other);
     Span &operator=(const Span &other);
     ~Span();
 
-    // Member functions
     void addNumber(int number);
     int shortestSpan() const;
     int longestSpan() const;
     
-    // Function to add numbers using a range of iterators
     template <typename Iterator>
     void addRange(Iterator begin, Iterator end) {
         unsigned int count = std::distance(begin, end);
@@ -46,7 +43,6 @@ public:
         _numbers.insert(_numbers.end(), begin, end);
     }
 
-    // Exception classes
     class FullSpanException : public std::exception {
     public:
         const char *what() const throw();

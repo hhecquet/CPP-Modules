@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 08:23:43 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/21 08:23:43 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/27 08:35:18 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ template <typename T>
 typename T::iterator easyfind(T &container, int value)
 {
     typename T::iterator it = std::find(container.begin(), container.end(), value);
-    //Search from the beginning to the end of this container for value, and give me an iterator to the first match.
+    //Search from the beginning to the end of this container for value,
+	//and give me an iterator to the first match.
     if (it == container.end())
         throw std::runtime_error("Value not found");
     return it;

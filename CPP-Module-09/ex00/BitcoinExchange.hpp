@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 19:26:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/26 19:26:05 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/27 09:42:53 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@
 
 class BitcoinExchange {
 private:
-    std::map<std::string, float> _database;  // Using map to store date -> exchange rate
+    std::map<std::string, float> _database;
 
-    // Helper methods
     bool isValidDate(const std::string& date) const;
     bool isValidValue(const float value) const;
     std::string findClosestDate(const std::string& date) const;

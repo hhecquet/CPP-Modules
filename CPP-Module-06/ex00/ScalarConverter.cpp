@@ -6,7 +6,7 @@
 /*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 10:15:48 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/26 11:13:20 by hhecquet         ###   ########.fr       */
+/*   Updated: 2025/05/27 08:12:18 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void ScalarConverter::convert(const std::string &literal) {
         else if (literal == "-inf" || literal == "-inff")
             value = -std::numeric_limits<double>::infinity();
     } else {
-        std::istringstream iss(literal);
+        std::istringstream iss(literal); //arranger pour couper proprement "123abc"
         if (!(iss >> value)) {
             std::cout << "Invalid input" << std::endl;
             return;

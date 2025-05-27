@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutanStack.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 09:21:03 by marvin            #+#    #+#             */
-/*   Updated: 2025/05/21 09:21:03 by marvin           ###   ########.fr       */
+/*   Updated: 2025/05/27 08:46:11 by hhecquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ template <typename T, typename Container = std::deque<T> >
 class MutantStack : public std::stack<T, Container>
 {
 public:
-    // Use container's iterator types
     typedef typename Container::iterator iterator;
     typedef typename Container::const_iterator const_iterator;
     typedef typename Container::reverse_iterator reverse_iterator;
     typedef typename Container::const_reverse_iterator const_reverse_iterator;
 
-    // Constructors, destructor, and assignment operator
     MutantStack() : std::stack<T, Container>() {}
     MutantStack(const MutantStack& other) : std::stack<T, Container>(other) {}
     MutantStack& operator=(const MutantStack& other) {
@@ -36,7 +34,6 @@ public:
     }
     ~MutantStack() {}
 
-    // Iterator methods - access the underlying container (c is a protected member of std::stack)
     iterator begin() { return this->c.begin(); }
     iterator end() { return this->c.end(); }
     
