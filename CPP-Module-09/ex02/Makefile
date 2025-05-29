@@ -6,7 +6,7 @@
 #    By: hhecquet <hhecquet@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/30 09:54:11 by hhecquet          #+#    #+#              #
-#    Updated: 2025/05/27 13:31:24 by hhecquet         ###   ########.fr        #
+#    Updated: 2025/05/29 10:19:59 by hhecquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp		\
-		Fixed.cpp
+		PmergeMe.cpp
 
 
 OBJDIR = 🖇️​
